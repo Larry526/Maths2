@@ -15,7 +15,7 @@
 - (Question *) generateRandomQuestion {
     NSArray *questionSubclassNames = @[@"AdditionQuestion",@"SubtractionQuestion",@"MultiplicationQuestion",@"DivisionQuestion"];
     
-    int randomIndex = arc4random_uniform(3);
+    int randomIndex = arc4random_uniform(4);
     NSString *randomQuestionType = questionSubclassNames [randomIndex];
     Question *randomQuestion = [[NSClassFromString(randomQuestionType) alloc] init];
     return randomQuestion;
